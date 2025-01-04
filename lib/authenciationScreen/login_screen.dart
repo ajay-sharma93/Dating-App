@@ -87,9 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   borderRadius: BorderRadius.all(Radius.circular(25)),
                 ),
                 child: InkWell(
-                  onTap: () {
-                    Get.to(RegistrationScreen());
-                  },
+                  onTap: () {},
                   child: const Center(
                     child: Text(
                       "Login",
@@ -126,7 +124,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(RegistrationScreen());
+                    },
                     child: const Text("Create your account",
                         style: TextStyle(
                           fontSize: 18,
