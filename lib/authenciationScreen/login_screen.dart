@@ -127,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     onTap: () {
                       Get.to(RegistrationScreen());
                     },
-                    child: const Text("Create your account",
+                    child: const Text("Create your Account..",
                         style: TextStyle(
                           fontSize: 18,
                           color: Colors.white,
