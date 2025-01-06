@@ -1,3 +1,4 @@
+import 'package:datingapp/controllers/authentication_controller.dart';
 import 'package:datingapp/widgets/custom_text_fields_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -61,6 +62,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   bool showProgressBar = false;
 
+  var authenticationController = AuthenticationController.authController;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,13 +93,38 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 height: 16,
               ),
               //choose image circle avatar
-              GestureDetector(
-                onTap: () {},
-                child: const CircleAvatar(
-                  radius: 80,
-                  backgroundImage: AssetImage("images/man.jpg"),
-                  backgroundColor: Colors.black,
-                ),
+              const CircleAvatar(
+                radius: 80,
+                backgroundImage: AssetImage("images/man.jpg"),
+                backgroundColor: Colors.black,
+              ),
+
+              Row(
+                mainAxisAlignment:MainAxisAlignment.center,
+                children:
+                 [
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.image_outlined,
+                      color: Colors.grey,
+                      size:30,
+                    ),
+                  ),
+
+                  const SizedBox(
+                    width: 10,
+                  ),
+
+                  //this is for camera icon button
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.camera_alt_outlined,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
               ),
 
               const SizedBox(
