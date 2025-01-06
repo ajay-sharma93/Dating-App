@@ -78,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 20,
               ),
 
-              // signup button //
+              // Login button //
               Container(
                 width: MediaQuery.of(context).size.width - 36,
                 height: 40,
@@ -144,6 +144,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       valueColor: AlwaysStoppedAnimation<Color>(Colors.pink),
                     )
                   : Container(),
+
+              const SizedBox(
+                height: 30,
+              ),
             ],
           ),
         ),

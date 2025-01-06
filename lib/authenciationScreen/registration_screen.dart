@@ -1,6 +1,7 @@
 import 'package:datingapp/widgets/custom_text_fields_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
@@ -57,6 +58,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   TextEditingController religionTextEditingController = TextEditingController();
   TextEditingController ethnicityTextEditingController =
       TextEditingController();
+
+  bool showProgressBar = false;
 
   @override
   Widget build(BuildContext context) {
@@ -581,6 +584,67 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
               const SizedBox(
                 height: 15,
+              ),
+
+              // Create your acc button is placed//
+              Container(
+                width: MediaQuery.of(context).size.width - 36,
+                height: 40,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(25)),
+                ),
+                child: InkWell(
+                  onTap: () {},
+                  child: const Center(
+                    child: Text(
+                      "Create Account",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+              //already have acc login here!
+              const SizedBox(
+                height: 16,
+              ),
+
+              // Container(
+              //   width: MediaQuery.of(context).size.width - 36,
+              //   height: 16,
+              // ),
+
+              //already have an acc
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Already Have an account ? ",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: const Text("LOGIN HERE",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 16,
               ),
             ],
           ),
